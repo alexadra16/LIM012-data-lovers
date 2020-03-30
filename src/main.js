@@ -1,6 +1,20 @@
-import { example } from './data.js';
-// import data from './data/atletas/atletas.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
+import lol from './data/lol/lol.js';
 
-console.log(example, data);
+let space = '';
+const dataChamps = lol.data;
+const showAll = () => {
+  for (const properties in dataChamps) {
+    const nameId = `<p class='info'>${dataChamps[properties].name}</p>`;
+    const roleId = `<p class ='info2'>${dataChamps[properties].tags}</p>`;
+    const attack = `<p class='info2'>Nivel de ataque: ${dataChamps[properties].info.attack}</p>`;
+    const defense = `<p  class='info2' >Nivel de defensa: ${dataChamps[properties].info.defense}</p>`;
+    space += `
+    <section class='target'style="background:url(${dataChamps[properties].splash}); background-size: 100% 100%">
+    <div>
+    ${nameId + roleId + attack + defense} 
+    </div>
+    </section>`;
+  }
+};
+showAll(lol);
+document.getElementById('champions').innerHTML = space;
