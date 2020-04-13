@@ -61,9 +61,11 @@ En este proyecto implementamos 9 historias de usuario:
 ![Pantallainicio](ImagesREADME/protmovile.png)
 
 ### _Testing con usuarios reales_ 👩 🧑
-
+Usuario 1: Sugirio cambiar los iconos de los items para que resalten mas ,seguido de los puntajes del campeon
+Usuario 2: Sugirio mejorar la visibilidad de los puntajes de cada campeon
+Usuario 3: Sugirio cambiar el tamaño de la letra
 ### _Feedback recibido_ 💪
-
+-Guadalupe: Los bordes de las tarjetas deben ser mas suavizados. -Katerin: Deberian añadirle un botón que redirija a la página de League of Legends.
 ## Proyecto finalizado 📦
 
 ![Pantallainicio](ImagesREADME/1.png)
@@ -72,6 +74,7 @@ En este proyecto implementamos 9 historias de usuario:
 ![card-reverse](ImagesREADME/4.png)
 ![card](ImagesREADME/5.png)
 ![card-information](ImagesREADME/6.png)
+![card-movil](ImagesREADME/movil.png)
 
 ## _Checklist_ 📋
 
