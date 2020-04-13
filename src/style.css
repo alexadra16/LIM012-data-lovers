@@ -443,6 +443,7 @@ input:focus {
   border: 1.5px solid white;
 }
 
+
 @media (min-height: 640px) {
   
   .login {
@@ -601,3 +602,4 @@ input:focus {
   margin-top: 40%;
 }
 }
+
