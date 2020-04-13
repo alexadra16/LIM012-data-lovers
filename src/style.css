@@ -1,4 +1,448 @@
 body {
+
+  background: url("Images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
+  font-family: SedanFont;
+  src: url(Fuentes/Sedan-Regular.ttf);
+}
+
+@font-face {
+  font-family: leagueoflegend;
+  src: url(Fuentes/LolBold.ttf);
+}
+
+@font-face {
+  font-family: fmark;
+  src: url(Fuentes/ffmark/FontFont.FF.Mark.Pro.Medium.Commercial.Font-FONT/FontFont_FF.Mark.Pro.Medium.otf);
+}
+
+.menu {
+  width: 22%;
+  height: 100%;
+  display: block;
+  float: left;
+  background: rgb(5, 5, 5, 0.4);
+  position: fixed;
+}
+
+body:before {
+  content: "";
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.4;
+}
+
+body #container {
+  position: relative;
+}
+
+.menu #username {
+  font-family: SedanFont;
+  font-size: 28px;
+  font-weight: 100;
+  color: #d8ba74;
+  text-align: center;
+  margin: 3px 20px;
+}
+
+.menu #level {
+  font-family: SedanFont;
+  font-size: 20 px;
+  font-style: regular;
+  font-weight: 20;
+  color: #b49a5d;
+  margin: 10px 30px;
+  text-align: center;
+}
+
+.logo {
+  margin: 36% 34.5% 10%;
+  width: 31%;
+}
+
+#divisorFather {
+  margin: 5px;
+  margin-block-end: 30px;
+  display: block;
+  float: right;
+  width: 75%;
+}
+
+#championsIcon {
+  width: 2.2%;
+  margin: 2.3% 1% 0% 49.7%;
+  display: block;
+}
+
+h2 {
+  font-family: leagueoflegend;
+  color: #d8ba74;
+  font-size: 200%;
+  text-align: center;
+  letter-spacing: 2.5px;
+  margin: 1% 0% 0.7% 1%;
+  min-width: 50%;
+}
+
+#divisorFather #divisor {
+  width: 68%;
+  z-index: initial;
+  margin: 0.1% 0% 2% 3.5%;
+  display: inline-block;
+  position: fixed;
+}
+
+.card {
+  display: block;
+  box-sizing: border-box;
+  min-width: 250px;
+  min-height: 300px;
+  padding-right: 2%;
+  margin: 0px;
+  float: left;
+  padding: 5px;
+  box-shadow: inset 0px -130px 80px rgba(0, 0, 0, 0.8);
+  transform-style: preserve-3d;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.imagenItem {
+  width: 3%;
+  height: 3%;
+  float: left;
+  margin-left: 10%;
+}
+.imagenItem img {
+  margin-top: 1.5px;
+}
+.textItem {
+  float: right;
+  text-align: justify;
+  align-items: left;
+  color: white;
+  margin-right: 5%;
+  line-height: 88%;
+  font-family: leagueoflegend;
+}
+.Datescard,
+.DatescardBack {
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+.Datescard {
+  padding-top: 0.03px;
+  margin-top: 90%;
+  display: block;
+}
+.DatescardBack {
+  transform: rotateY(180deg);
+  position: absolute;
+  box-shadow: inset 0px -200px 80px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+}
+.infoMain {
+  font-family: leagueoflegend;
+  font-size: 125%;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+.card:hover {
+  transition: (1s) ease;
+  transform: scale(1.1);
+  box-shadow: 0.08rem 0.1rem 0.9rem #feb412;
+  z-index: 3;
+}
+
+#divisor_cards {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 98%;
+}
+
+.card .info {
+  text-align: center;
+  color: white;
+  font-size: 140%;
+  font-family: fmark;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.card .info2 {
+  font-family: fmark;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 87%;
+  text-align: center;
+  color: #c4831b;
+}
+
+#champions {
+  margin-top: 0.5%;
+  display: flex;
+  overflow-x: scroll;
+  padding: 3% 1% 1% 1.5%;
+  overflow-y: hidden;
+  width: 65%;
+  height: 110%;
+  margin-right: 4%;
+  float: right;
+  line-height: 0.3px;
+  cursor: pointer;
+  align-items: center;
+}
+
+#champions::-webkit-scrollbar {
+  width: 0.9%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  overflow-x: auto;
+}
+
+#champions::-webkit-scrollbar-thumb {
+  background: rgba(255, 250, 255, 0.4);
+  border-radius: 5px;
+}
+
+.list {
+  background: rgba(64, 61, 57, 0.9);
+  border: 2px solid #ea9d20;
+  box-sizing: border-box;
+  font-family: leagueoflegend;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 2em;
+  color: #b49a5d;
+  border-radius: 5px;
+  width: 90%;
+  height: 10%;
+  margin-top: 1em;
+}
+
+#look {
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid #ea9d20;
+  box-sizing: border-box;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 122%;
+  color: #ea9d20;
+  width: 80%;
+  height: 7%;
+  margin: 3% 9% 6%;
+}
+
+.list {
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid #ea9d20;
+  box-sizing: border-box;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 122%;
+  color: #ea9d20;
+  width: 80%;
+  height: 7%;
+  text-align: left;
+  margin: 3% 9% 2%;
+}
+#mistakeText {
+  color: #ea9d20;
+  font-size: 3em;
+  font-family: fmark;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+}
+
+.login {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: #f1f1f1;
+}
+
+.image.namelol {
+  width: 30%;
+  height: 47%;
+  margin: 0px;
+}
+button {
+  font-family: fmark, Arial;
+  font-weight: bold;
+  font-size: 74%;
+  padding: 4% 6%;
+  background-color: #2b9da6;
+  color: #fbfffe;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  border: 1.5px solid white;
+  border-radius: 3px;
+  outline: none;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #222725;
+  border: #2b9ea6 solid 1.5px;
+  border-radius: 2px;
+  outline: none;
+}
+
+.contentlogin {
+  width: 26%;
+  height: 66%;
+  margin: 6% 37% 17% 37%;
+  /* background-color: black; */
+  padding: 1.5% 0.5%;
+  text-align: center;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.input {
+  border: 3px solid white;
+  background-color: #e5e5e5;
+  border-radius: 7px;
+  width: 69%;
+  height: 4%;
+  padding: 4.3% 6%;
+  font-size: 68%;
+  text-transform: uppercase;
+  font-family: fmark, Arial;
+  color: #848c8e;
+}
+
+.pass {
+  padding: 0% 0% 9% 0%;
+}
+
+input:focus {
+  border: 3px solid black;
+  background-color: #e5e5e5;
+  border-radius: 5px;
+  width: 68%;
+  height: 4%;
+  padding: 4.3% 6%;
+  font-size: 69%;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: fmark, Arial;
+  color: #2b302e;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.text.initsession {
+  font-family: fmark, Arial;
+  font-size: 160%;
+  font-weight: bold;
+  padding: 4%;
+  margin: 3% 3% 13% 3%;
+}
+
+.input:focus {
+  text-transform: uppercase;
+}
+
+.background {
+  z-index: -1;
+}
+.background:before {
+  opacity: 4;
+}
+
+.male1 {
+  position: absolute;
+  z-index: -1;
+  width: 65%;
+  height: 115%;
+  animation-name: rebotemale1;
+  animation-duration: 2.7s;
+  animation-iteration-count: infinite;
+}
+
+.male2 {
+  position: absolute;
+  width: 39%;
+  height: 98%;
+  z-index: -1;
+  right: 0px;
+  bottom: -80px;
+}
+
+.inputdiv {
+  padding: 0% 0% 4% 0%;
+}
+
+.logoriot {
+  z-index: 2;
+  margin: auto;
+  padding: 4% 0% 0%;
+  display: block;
+  width: 14%;
+  height: 12%;
+}
+
+.logout {
+  display: none;
+}
+
+.male2:hover {
+  filter: brightness(60%);
+}
+
+@keyframes rebotemale1 {
+  0% {
+    bottom: -144px;
+  }
+  50% {
+    bottom: -155px;
+  }
+  100% {
+    bottom: -144px;
+  }
+}
+
+.play {
+  margin-top: 90%;
+  margin-left: 40%;
+  position: absolute;
+  background-color: #ea9d20;
+}
+
+.play:hover {
+  background-color: #ea9d20;
+  transition: (1s) ease;
+  transform: scale(1.1);
+  box-shadow: 0.08rem 0.1rem 0.9rem #feb412;
+  color: white;
+  border: 1.5px solid white;
+}
+=======
     background: url("background.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -195,3 +639,4 @@ body {
     .optionRule{
       background: rgba(64, 61, 57, 0.9);
     }
+
