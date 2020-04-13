@@ -1,193 +1,462 @@
 body {
-  background: url("fondo.jpg");
-  background-repeat: no-repeat;
+  background: url("Images/background.jpg");
+ background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
   margin: 0px;
   padding: 0px;
 }
-
-
-@font-face{
+@font-face {
   font-family: SedanFont;
-  src: url(sedan/Sedan-Regular.ttf);
+  src: url(Fuentes/sedan/Sedan-Regular.ttf);
 }
+
+@font-face {
+  font-family: leagueoflegend;
+  src: url(Fuentes/LolBold.ttf);
+}
+
+@font-face {
+  font-family: fmark;
+  src: url(Fuentes/ffmark/FontFont.FF.Mark.Pro.Medium.Commercial.Font-FONT/FontFont_FF.Mark.Pro.Medium.otf);
+}
+
 
 .menu {
   width: 22%;
   height: 100%;
   display: block;
   float: left;
-  background: rgb(5, 5, 5,  .4);
+  background: rgb(5, 5, 5, 0.4);
   position: fixed;
 }
-body:before{
-  content:"";
-  background-color: rgb(0,0,0);
+body #container {
+  position: relative;
+}
+
+body:before {
+  content: "";
+  background-color: rgb(0, 0, 0);
   width: 100%;
   height: 100%;
   position: absolute;
   opacity: 0.4;
 }
-body #contenido{
-  position: relative;
-}
-.menu #username{
+
+.menu #username {
   font-family: SedanFont;
-  font-size: 28px;
+  font-size:2em;
   font-weight: 100;
-  color: #D8BA74;
+  color: #d8ba74;
   text-align: center;
   margin: 3px 20px;
 }
-
-.menu #level{
+.menu #level {
   font-family: SedanFont;
-  font-size: 20 px;
+  font-size: 2.5em;
   font-style: regular;
   font-weight: 20;
-  color: #B49A5D;
+  color: #b49a5d;
   margin: 10px 30px;
   text-align: center;
 }
 
-.logo{
+.logo {
   margin: 36% 34.5% 10%;
   width: 31%;
 }
-#divisorFather{
+
+#divisorFather {
   margin: 5px;
   margin-block-end: 30px;
   display: block;
   float: right;
   width: 75%;
 }
-#campeonesIcon{
-  width: 2.5%;
+
+#championsIcon {
+  width: 2.8%;
+  margin-left: 52%;
+  margin-top: 2.5%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
-h2{
-  font-family: SedanFont;
-  color: #D8BA74;
-  line-height: 0.3px;
-  font-size: 2.5em;
-  text-align:center;
-  margin-right: 10px;
-  letter-spacing: 1.5px;
-  font-style: normal;
-  min-height: 1em;
+
+h2 {
+  font-family: leagueoflegend;
+  color: #d8ba74;
+  font-size: 4em;
+  text-align: center;
+  margin-left: 6%;
+  margin-top: 5%;
+  line-height: 0;
+  margin-block-end: 2%;
 }
-#divisorFather #divisor{
-  width: 68%;
-  margin-top: 0;
+#divisorFather #divisor {
+  width: 80%;
+  z-index: initial;
+  margin: 0.1% 0% 2% ;
   display: inline-block;
   position: fixed;
-  margin-left: 3%;
-  
 }
-.target {
-  background: url();
+.card {
   display: block;
   box-sizing: border-box;
   width: 35%;
-  height:40%;
+  height: 40%;
   margin: 7px;
   padding-right: 2%;
   min-width: 33%;
-  min-height:70%;
+  min-height: 70%;
   float: left;
   line-height: 0.3px;
   padding: 5px;
   margin-left: 0;
-  margin-right: 0;
-  box-shadow: inset 0px -130px 80px rgba(0, 0, 0, 0.8);
+  margin-right: 0;box-shadow: inset 0px -130px 80px rgba(0, 0, 0, 0.8);
+   transform-style: preserve-3d;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-.target:hover{
-  transition: (1.5s) linear;
-  transform: scale(1.05);
-  box-shadow: -10px 0px 10px rgba(6, 120, 187, 0.5),
-  10px -10px 10px rgba(6, 120, 187, 0.5)
+
+.imagenItem{
+  width:15%;
+  height: 15%;
+  float: left;
+  margin-left: 10%;
 }
-#contieneTodo{
+
+.imagenItem img{
+  margin-top: 1.5px;
+  width: 100%;
+  height: 70%;
+}
+
+button {
+  font-family: fmark, Arial;
+  font-weight: bold;
+  font-size: 74%;
+  padding: 4% 6%;
+  background-color: #2b9da6;
+  color: #fbfffe;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  border: 1.5px solid white;
+  border-radius: 3px;
+  outline: none;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #222725;
+  border: #2b9ea6 solid 1.5px;
+  border-radius: 2px;
+  outline: none;
+}
+
+.textItem{
+  float: right;
+  text-align: justify;
+  align-items: left;
+  color: white;
+  line-height: 1.2em;
+  font-family: fmark;
+  font-size: 1.5rem;
+}
+
+.Datescard , .DatescardBack{
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.Datescard { 
+  padding-top: 0.03px;
+  margin-top: 90%;
+  display: block;
+}
+ 
+ .DatescardBack {
+ transform: rotateY(180deg);
+ position: absolute;
+ box-shadow: inset 40px 10em 5em rgba(0, 0, 0, 0.7);
+ width:100%;
+ height:100%;
+ }
+ .infoMain{
+  font-family: SedanFont;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
+}
+
+.card:hover{ 
+  transition: (1s) ease;
+   transform: scale(1.05) ;
+   box-shadow:  0.08rem 0.08rem 0.9rem #feb412;
+   z-index: 3;
+  }
+
+#divisor_cards {
   margin: 0;
   padding: 0;
- height: 100%;
- width: 98%;
+  height: 100%;
+  width: 98%;
 }
 
-
-.target .info{
-  font-family: Arial;
+.card .info {
   text-align: center;
   color: white;
   font-size: 2.3em;
+  font-family: fmark;
   letter-spacing: 5px;
+  text-transform: uppercase;
 }
-.target .info2{
-  font-family: Arial;
+.card .info2 {
+  font-family: fmark;
   font-style: normal;
   font-weight: bold;
   font-size: 1.2em;
+  line-height: 0.3px;
   text-align: center;
-  color: #C4831B;
+  color: #c4831b;
+  min-width:1em;
+}
+#champions {
+  margin-top: 0.5%;
+  display: flex;
+  overflow-x: scroll;
+  padding: 3% 1% 1% 1.5%;
+  overflow-y: hidden;
+  width:65%;
+  height: 110%;
+  margin-right: 4%;
+  float: right;
+  line-height: 0.3px;
+  cursor: pointer;
+   align-items: center;
 }
 
-#champions {
-  margin: 0px;
-  display:flex;
-  overflow-x: scroll;
-  width: 75%;
-  height : 98%;
-  float:right;
-}
-#champions::-webkit-scrollbar{
-  width:0.9%;
-  background:rgba(255,255,255,  .1);
+#champions::-webkit-scrollbar {
+  width: 0.9%;
+  background: rgba(255, 255, 255, 0.1);
   display: flex;
   overflow-x: auto;
 }
-#champions::-webkit-scrollbar-thumb{
-  background:rgba(255,250,255,  .4) ;
+
+#champions::-webkit-scrollbar-thumb {
+  background: rgba(255, 250, 255, 0.4);
   border-radius: 5px;
 }
-#champions div{
-  width: 100%;
-  height: 35%;
-  margin-top: 90%;
-  padding-top: 0.03px;
+
+
+#look {
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid #ea9d20;
+  box-sizing: border-box;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 122%;
+  color: #ea9d20;
+  width: 80%;
+  height: 7%;
+  margin: 3% 9% 6%;
 }
-  
-  #look{
-    background: transparent;
-    border: 0px;
-    border-bottom: 1px solid #EA9D20;
-    box-sizing: border-box;
-    font-family: Arial;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 122%;
-    color: #EA9D20;
-    width: 80%;
-    height: 7%;
-    text-align: left;
-    margin: 3% 9% 6%;
-    outline: none;
+
+.list {
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid #ea9d20;
+  box-sizing: border-box;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 100;
+  font-size:200%;
+  color: #ea9d20;
+  width: 80%;
+  height: 7%;
+  text-align: left;
+  margin: 3% 9% 2%;
+  border-radius: 5px;
+}
+#mistakeText{
+  color: #ea9d20;
+  font-size: 3em;
+  font-family: fmark;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+}
+
+.login {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: #f4f4f4;
+}
+
+
+.enterlogin {
+  font-family: fmark, Arial;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 5% 15%;
+  background-color: #2b9da6;
+  color: #fbfffe;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  border: 1.5px solid white;
+  border-radius: 3px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.enterlogin:hover {
+  background-color: transparent;
+  color: #222725;
+  border: #2b9ea6 solid 1.5px;
+  border-radius: 2px;
+  outline: none;
+}
+
+.contentlogin {
+  width: 26%;
+  height: 66%;
+  margin: 6% 37% 17% 37%;
+  padding: 1.5% 0.5%;
+  text-align: center;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.input {
+  border: 3px solid white;
+  background-color: #e5e5e5;
+  border-radius: 9px;
+  width: 69%;
+  height: 4%;
+  padding: 4.3% 6%;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: fmark, Arial;
+  color: #848c8e;
+}
+
+.pass {
+  padding: 0% 0% 9% 0%;
+}
+
+input:focus {
+  border: 3px solid black;
+  background-color: #e5e5e5;
+  border-radius: 5px;
+  width: 68%;
+  height: 4%;
+  padding: 4.3% 6%;
+  font-size: 69%;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: fmark, Arial;
+  color: #2b302e;
+  outline: none;
+  transition: border 0.3s;
   }
-  .List{
-    background: transparent;
-    border: 0px;
-    border-bottom: 1px solid #EA9D20;
-    box-sizing: border-box;
-    font-family: Arial;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 122%;
-    color: #EA9D20;
-    width: 80%;
-    height: 7%;
-    text-align: left;
-    margin: 3% 9% 6%;
-    
+.text.initsession {
+  font-family: fmark, Arial;
+  font-size:4em;
+   font-weight: bold;
+  padding: 4%;
+  margin: 3% 3% 13% 3%;
+}
+
+.input:focus {
+  text-transform: uppercase;
+}
+
+.background {
+  z-index: -1;
+}
+.background:before {
+  opacity: 4;
+}
+
+.male1 {
+  position: absolute;
+  z-index: -1;
+  width: 65%;
+  height: 115%;
+  animation-name: rebotemale1;
+  animation-duration: 2.7s;
+  animation-iteration-count: infinite;
+}
+
+.male2 {
+  position: absolute;
+  width: 39%;
+  height: 98%;
+  z-index: -1;
+  right: 0px;
+  bottom: -80px;
+}
+
+.inputdiv {
+  padding: 0% 0% 4% 0%;
+}
+
+.logoriot {
+  z-index: 2;
+  margin: auto;
+  padding: 4% 0% 0%;
+  display: block;
+  width: 14%;
+  height: 12%;
+}
+
+.logout {
+  display: none;
+}
+
+.male2:hover{
+  filter: brightness(60%);
+}
+
+@keyframes rebotemale1 {
+  0% {
+    bottom: -144px;
+  }
+  50% {
+    bottom: -155px;
+  }
+  100% {
+    bottom: -144px;
+  }
+}
+
+.play{
+  margin-top:90%;
+  margin-left: 40%;
+  position: absolute;
+  background-color: #ea9d20;
+  
+  }
+  
+  .play:hover{
+    background-color: #ea9d20; 
+    transition: (1s) ease;
+    transform: scale(1.1) ;
+    box-shadow:  0.08rem 0.1rem 0.9rem #feb412;
+    color:white;
+    border: 1.5px solid white;
   }
