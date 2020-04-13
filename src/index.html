@@ -2,50 +2,71 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width" user-scarlable=no, initial-scale=1>
-	<title>repl.it</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" user-scalable="no," initial-scale="1" />
+	<title>League of Legends</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/es-mx/production/es-mx/static/favicon-0cf29ce019f7cd1e7b24f85ab6ff97da.ico">
 </head>
 
 <body>
-	<div id="contenido">
+<section class="login">
+  <img src="Images/character-male.png" class="male1" />
+  <img src="Images/character-male2.png" class="male2" />
+  <div class="contentlogin">
+    <img src="Images/logoriot.png" class="logoriot" />
+    <p class="text initsession">Iniciar sesión</p>
+    <div class="inputdiv">
+      <input type="text" maxlength="15" class="input user" id="inputUser" placeholder="Nombre de usuario">
+    </div>
+    <div class="pass">
+      <input type="password" maxlength="15" class="input password" placeholder="Contraseña">
+    </div>
+    <button  class="enterlogin" id="enterlogin">Ingresar</button>
+  </div>
+</section >
+	<div id="container">
 		<aside class="menu">
-			<img class="logo" src= "LOL_Logo.png"/>
+			<img class="logo" src= "Images/LOL_Logo.png"/>
       <h1 id="username" class="text">Darken25</h1>
       <h3 id="level" class="text">nivel 30</h3>
 
-      <input type="text" id="look" placeholder= "Buscar">
-      <select class="List" id="orderList">
+      <input type="text" id="look" placeholder="Buscar" />
+      <select class="list" id="orderList">
         <option id="upward" value="az">A-Z</option>
         <option id="falling" value="za">Z-A</option>
       </select>
-      <select class="List" value="Ver todos los roles">
-        <option class="optionRule">Selecciona una opcion</option>
-        <option class="optionRule" id="Fighter">Fighter</option>
-        <option class="optionRule" id="Tank">Tank</option>
-        <option class="optionRule" id="Assassin">Assassin</option>
-        <option class="optionRule" id="Mage">Mage</option>
-        <option class="optionRule"id="Support">Support</option>
+      <select class="list" id="roleList">
+        <option class="roleOption" selected disabled>Escoger el rol</option>
+        <option class="roleOption" id="Fighter" value="Fighter">Fighter</option>
+        <option class="roleOption" id="Tank" value="Tank">Tank</option>
+        <option class="roleOption" id="Assassin"  value="Assassin">Assassin</option>
+        <option class="roleOption" id="Mage" value="Mage">Mage</option>
+        <option class="roleOption" id="Support" value="Support">Support</option>
+         <option class="roleOption" id="Marksman" value="Marksman">Marksman</option>
       </select>
-      <select class="List" >
-        <option class="orderList2" id="puntMax">Ver puntuacion maxima</option>
-        <option class="orderList2" id="puntMin">Ver puntuacion minima</option>
+      <select class="list" id="puntList">
+        <option class="prom" selected disabled>Seleccionar opcion</option>
+        <option class="prom" value="higher" id="puntMax">Mayor armadura por nivel</option>
+        <option class="prom" value="less" id="puntMin">Menor armadura por nivel</option>
       </select>
-  </aside>
-  <div id="contieneTodo">
-    <section id="divisorFather">
-      <img id="campeonesIcon" src="https://universe.leagueoflegends.com/esimages/content_type_icon_champion__3nwJQ.png"/>
-      <h2>CAMPEONES</h2>
-       <img id="divisor" src="https://universe.leagueoflegends.com/images/t1HeaderDivider.png"/>
-    </section>
+    </aside>
+    <div id="divisor_cards">
+      <section id="divisorFather">
+        <img
+          id="championsIcon"
+          src="https://universe.leagueoflegends.com/esimages/content_type_icon_champion__3nwJQ.png"
+        />
+        <h2>CAMPEONES</h2>
+        <img
+          id="divisor"
+          src="https://universe.leagueoflegends.com/images/t1HeaderDivider.png"
+        />
+      </section>
       <div id="champions"></div>
-      <section id="prueba"></section>
-  </div>
     </div>
+  </div>
   <script type="module" src="main.js"></script>
-  <script type="module" src="script.js"></script>
-  <script type="module" src="script.js"></script>
-    
+  <script type="module" src="data.js"></script>
   </body>
 </html>

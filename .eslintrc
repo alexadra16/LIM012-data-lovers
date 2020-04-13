@@ -24,3 +24,8 @@
     "jest/valid-expect": "error"
   }
 }
+/*{
+  "env": {
+    "jest": true
+  }
+}*/
