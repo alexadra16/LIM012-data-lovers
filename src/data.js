@@ -3,14 +3,12 @@ export const sortData = (array, sortOrder) => {
   let outcomeSort = [];
   if (sortOrder === 'za') {
     outcomeSort = array.sort((o1, o2) => {
-      if (o1.name > o2.name) { return -1; }
-      if (o1.name < o2.name) { return 1; }
+      if (o1.name > o2.name) { return -1; } if (o1.name < o2.name) { return 1; }
       return 0;
     });
   } else if (sortOrder === 'az') {
     outcomeSort = array.sort((o1, o2) => {
-      if (o1.name < o2.name) { return -1; }
-      if (o1.name > o2.name) { return 1; }
+      if (o1.name < o2.name) { return -1; } if (o1.name > o2.name) { return 1; }
       return 0;
     });
   } return outcomeSort;
